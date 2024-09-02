@@ -1,0 +1,81 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- Custom styles for this template -->
+<link th:href="@{/css/index.css}" rel="stylesheet">
+<head th:replace="~{fragments/common :: head}"></head>
+<style>
+    main{
+        opacity: 0.8;
+    }
+</style>
+<body>
+<nav th:replace="~{fragments/common :: menu('home')}"></nav>
+
+<main>
+    <div class="position-relative text-center bg-body-tertiary">
+        <div class="col-md-6 p-lg-5 mx-auto my-5">
+            <h1 class="display-3 fw-bold">구직자/구인자를 위한</h1>
+            <h3 class="fw-normal text-muted mb-3">원하는 직원/회사를 찾자!</h3>
+            <div class="d-flex gap-3 justify-content-center lead fw-normal">
+                <a class="btn btn-light rounded-pill px-3" href="/jobs">구직하기</a>
+                <a class="btn btn-light rounded-pill px-3" href="/employers">구인하기</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center">
+            <div class="my-3 p-3">
+                <h2 class="display-5">구인/구직 공고</h2>
+                <p class="lead">어서 찜하세요!</p>
+            </div>
+            <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+        </div>
+        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center">
+            <div class="my-3 py-3">
+                <h2 class="display-5">구인/구직 공고</h2>
+                <p class="lead">어서 찜하세요!</p>
+            </div>
+            <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+        </div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center">
+            <div class="my-3 p-3">
+                <h2 class="display-5">구인/구직 공고</h2>
+                <p class="lead">어서 찜하세요!</p>
+            </div>
+            <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+        </div>
+        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center">
+            <div class="my-3 py-3">
+                <h2 class="display-5">구인/구직 공고</h2>
+                <p class="lead">어서 찜하세요!</p>
+            </div>
+            <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+        </div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center">
+            <div class="my-3 p-3">
+                <h2 class="display-5">구인/구직 공고</h2>
+                <p class="lead">어서 찜하세요!</p>
+            </div>
+            <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+        </div>
+        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center">
+            <div class="my-3 py-3">
+                <h2 class="display-5">구인/구직 공고</h2>
+                <p class="lead">어서 찜하세요!</p>
+            </div>
+            <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+        </div>
+    </div>
+</main>
+
+<footer th:replace="~{fragments/common :: footer}"></footer>
+<script th:replace="~{fragments/common :: common-scripts}"></script>
+</body>
+</html>

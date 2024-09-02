@@ -1,0 +1,108 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <style>
+    .contact-table {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    .faq-section {
+      margin-top: 40px;
+    }
+
+    .faq-header {
+      cursor: pointer;
+    }
+
+  </style>
+  <title>Customer Support</title>
+  <head th:replace="~{fragments/common :: head}"></head>
+</head>
+<body>
+
+<nav th:replace="~{fragments/common :: menu('support')}"></nav>
+
+<main class="container">
+  <div class="p-5 bg-light p-2 text-dark bg-opacity-75 rounded-5">
+  <h1 class="mt-5">고객지원</h1>
+
+  <table class="table table-bordered contact-table">
+    <thead>
+    <tr>
+      <th>항목</th>
+      <th>내용</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>이름</td>
+      <td th:text="${name}">홍길동</td>
+    </tr>
+    <tr>
+      <td>이메일</td>
+      <td th:text="${email}">honggildong@example.com</td>
+    </tr>
+    <tr>
+      <td>전화번호</td>
+      <td th:text="${phone}">010-1234-5678</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <section class="faq-section">
+    <h2>자주 묻는 질문 (FAQ)</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="card">
+        <div class="card-header faq-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              질문 1: 이력서 등록 방법은?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+          <div class="card-body">
+            답변: 이력서 등록은 웹사이트 상단의 "구직" 페이지의 "이력서 쓰기" 버튼을 클릭하여 진행할 수 있습니다.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header faq-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              질문 2: 연락은 언제 오나요?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+          <div class="card-body">
+            답변: 연락은 회사 개별적으로 합니다.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header faq-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              질문 3: 구인을 할 시에 혜택은 무엇이 있나요?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+          <div class="card-body">
+            답변: 아직 정해진 것은 없습니다. 추후에 제공 예정입니다.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+</main>
+
+<footer th:replace="~{fragments/common :: footer}"></footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

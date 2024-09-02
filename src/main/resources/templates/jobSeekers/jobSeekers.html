@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments/common :: head}"></head>
+<body>
+<nav th:replace="~{fragments/common :: menu('jobSeekers')}"></nav>
+
+<main class="container">
+    <h2>직장구해요 !!</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>이름</th>
+            <th>희망 직책</th>
+            <th>위치</th>
+            <th>고용 형태</th>
+            <th>기대 급여</th>
+            <th>스킬</th>
+            <th>상세보기</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="seeker : ${jobSeekers}">
+            <td th:text="${seeker.name}">이름</td>
+            <td th:text="${seeker.desiredJobTitle}">희망 직책</td>
+            <td th:text="${seeker.location}">위치</td>
+            <td th:text="${seeker.employmentType}">고용 형태</td>
+            <td th:text="${seeker.expectedSalary}">기대 급여</td>
+            <td th:text="${seeker.skills}">스킬</td>
+            <td><a th:href="@{/jobSeekers/{id}(id=${seeker.id})}" class="btn btn-primary">상세보기</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="/jobSeekers/new" class="btn btn-success">새 구직자 추가</a>
+</main>
+
+<footer th:replace="~{fragments/common :: footer}"></footer>
+<script th:replace="~{fragments/common :: common-scripts}"></script>
+</body>
+</html>

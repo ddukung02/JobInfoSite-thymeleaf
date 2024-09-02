@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments/common :: head}"></head>
+<body>
+<nav th:replace="~{fragments/common :: menu('jobs')}"></nav>
+
+<main class="container">
+    <div class="p-5 bg-light p-2 text-dark bg-opacity-75 rounded-5">
+        <h2 th:text="${jobPostingDetail.jobTitle}">직책</h2>
+        <div class="text-center mb-4" th:if="${jobPostingDetail.companyLogoPath != null}">
+            <img th:src="@{${jobPostingDetail.companyLogoPath}}" alt="Company Logo">
+        </div>
+        <p><strong>회사명:</strong> <span th:text="${jobPostingDetail.companyName}">회사명</span></p>
+        <p><strong>위치:</strong> <span th:text="${jobPostingDetail.location}">위치</span></p>
+        <p><strong>고용 형태:</strong> <span th:text="${jobPostingDetail.employmentType}">고용 형태</span></p>
+        <p><strong>채용 인원:</strong> <span th:text="${jobPostingDetail.positionCount}">채용 인원</span></p>
+        <p><strong>급여:</strong> <span th:text="${jobPostingDetail.salary}">급여</span></p>
+
+
+        <div class="text-center mb-4" th:each="imagePath : ${jobPostingDetail.jobPostingImagePaths}">
+            <img th:src="@{${imagePath}}" alt="Job Posting Image" class="mb-3">
+        </div>
+
+        <a href="#" th:href="@{/jobs}" class="btn btn-secondary">목록으로</a>
+    </div>
+</main>
+
+<footer th:replace="~{fragments/common :: footer}"></footer>
+<script th:replace="~{fragments/common :: common-scripts}"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments/common :: head}"></head>
+<body>
+<nav th:replace="~{fragments/common :: menu('jobSeekers')}"></nav>
+
+<main class="container">
+    <h2>구직자 상세 정보</h2>
+    <div>
+        <label>이름: </label>
+        <span th:text="${jobSeeker.name}">이름</span>
+    </div>
+    <div>
+        <label>희망 직책: </label>
+        <span th:text="${jobSeeker.desiredJobTitle}">희망 직책</span>
+    </div>
+    <div>
+        <label>위치: </label>
+        <span th:text="${jobSeeker.location}">위치</span>
+    </div>
+    <div>
+        <label>고용 형태: </label>
+        <span th:text="${jobSeeker.employmentType}">고용 형태</span>
+    </div>
+    <div>
+        <label>기대 급여: </label>
+        <span th:text="${jobSeeker.expectedSalary}">기대 급여</span>
+    </div>
+    <div>
+        <label>스킬: </label>
+        <span th:text="${jobSeeker.skills}">스킬</span>
+    </div>
+</main>
+
+<footer th:replace="~{fragments/common :: footer}"></footer>
+<script th:replace="~{fragments/common :: common-scripts}"></script>
+</body>
+</html>
